@@ -45,19 +45,29 @@ main {
 	set_val(BUTTON_11, 0.00);
 	set_val(BUTTON_12, 0.00);
 	set_val(BUTTON_13, 0.00);
-	set_val(STICK_2_X, 0.00);
-	set_val(STICK_2_Y, 0.00);
 	
 	// ACCEL_1_Z = Squat level
-	if(get_val(ACCEL_1_Z) < 3.00)
-		{
-			combo_run(Jump);
-		}
+	if(get_val(ACCEL_1_Z) < 0.00) combo_run(Jump);
+
 }
 
+// Button_16 => B Button >> Jump
 combo Jump
 {
-	// Button_16 => B Button >> Jump
-	set_val(BUTTON_16, 100.00);
-	wait(200);
+	wait(100);
+	if(get_val(ACCEL_1_Z) < 0.00) set_val(BUTTON_16, 100.00);
+	wait(100);
+	if(get_val(ACCEL_1_Z) < 0.00) set_val(BUTTON_16, 100.00);
+	wait(100);
+	if(get_val(ACCEL_1_Z) < 0.00) set_val(BUTTON_16, 100.00);
+	wait(100);
+	if(get_val(ACCEL_1_Z) < 0.00) set_val(BUTTON_16, 100.00);
+	wait(100);
+	if(get_val(ACCEL_1_Z) < 0.00) set_val(BUTTON_16, 100.00);
+	wait(100);
+	if(get_val(ACCEL_1_Z) < 0.00) set_val(BUTTON_16, 100.00);
+	wait(100);
+	if(get_val(ACCEL_1_Z) < 0.00) set_val(BUTTON_16, 100.00);
+	wait(100);
+	if(get_val(ACCEL_1_Z) < 0.00) set_val(BUTTON_16, 100.00);
 }
