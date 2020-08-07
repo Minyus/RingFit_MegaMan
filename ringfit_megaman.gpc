@@ -24,6 +24,16 @@ main {
 			set_val(STICK_2_X, 100.00);
 		}
 	
+	if((get_prev(ACCEL_2_Y) < 0.00) && (get_val(ACCEL_2_Y) >= 0.00))
+		{
+			combo_run(LeftToRight);
+		}
+
+	if((get_prev(ACCEL_2_Y) >= 0.00) && (get_val(ACCEL_2_Y) < 0.00))
+		{
+			combo_run(RightToLeft);
+		}
+	
 	// ACCEL_2_Z = Tilt to backward
 	if(get_val(ACCEL_2_Z) < -10.00)
 		{
@@ -67,6 +77,21 @@ main {
 			combo_stop(Jump);
 		}
 }
+
+combo LeftToRight
+{
+	set_val(STICK_2_X, 100.00);
+	wait(10);
+	set_val(STICK_2_X, 0.00);
+}
+
+combo RightToLeft
+{
+	set_val(STICK_2_X, -100.00);
+	wait(10);
+	set_val(STICK_2_X, 0.00);
+}
+
 
 // Button_16 => B Button >> Jumps
 combo Jump
