@@ -1,6 +1,6 @@
 # Ring Fit Mega Man
 
-Instruction to play Mega Man using Ring Fit Adventure controller for exercise
+Instruction to play Mega Man (a.k.a Rock Man) using Ring Fit Adventure controller for exercise
 
 ## How to play Mega Man in Ring Fit way
 
@@ -20,23 +20,19 @@ Instruction to play Mega Man using Ring Fit Adventure controller for exercise
 ### Disclaimer
 
 I shall not be liable for any damage to your body or hardware/software products you use following the instruction below.
-The following instruction worked for me, but I do not guarantee for you.
+The following steps worked for me (after struggling), but I can not guarantee in other cases.
 
 0. Prepare hardware
 
-From Nintendo
+    - [Nintendo Switch, Dock, and Joy-Cons](https://www.nintendo.com/switch/)
+    - [Ring-Con and leg strap that comes with Ring Fit Adventure](https://www.nintendo.com/games/detail/ring-fit-adventure-switch/)
 
-- [Nintendo Switch, Dock, and Joy-Cons](https://www.nintendo.com/switch/)
-- [Ring-Con and leg strap that comes with Ring Fit Adventure](https://www.nintendo.com/games/detail/ring-fit-adventure-switch/)
+    - [Titan Two](https://www.consoletuner.com/products/titan-two/)
+    - [Titan Expansion Kit](https://www.consoletuner.com/products/titan-two/) (to connect Joy-Cons with Titan Two via Bluetooth)
 
-From ConsoleTuner
-- [Titan Two](https://www.consoletuner.com/products/titan-two/)
-- [Titan Expansion Kit](https://www.consoletuner.com/products/titan-two/) (to connect Joy-Cons with Titan Two via Bluetooth)
-
-Additional
-- PC (Windows 64bit (10, 8.1, 7) or Mac (OS X 10.13+) computer)
-- Additional Micro-USB cable (A Micro-USB cable comes with Titan Two, but you will need one more to connect both PC and 
-Nintendo Switch Dock. I use an old Micro-USB cable used to charge my old Android smart phone.)
+    - PC (Windows 64bit (10, 8.1, 7) or Mac (OS X 10.13+) computer)
+    - Additional Micro-USB cable (A Micro-USB cable comes with Titan Two, but you will need one more to connect both PC and 
+    Nintendo Switch Dock. I could use an old Micro-USB cable used to charge my old Android smart phone.)
 
 1. Purchase and download [Mega Man Legacy Collection](https://www.nintendo.com/games/detail/mega-man-legacy-collection-switch/) to your Nintendo Switch.
 
@@ -46,11 +42,11 @@ Nintendo Switch Dock. I use an old Micro-USB cable used to charge my old Android
 
 4. Install Titan Expansion Kit to Titan Two and connect to your PC (using "PROG" connector of Titan Two) following the [instruction](https://www.consoletuner.com/wiki/index.php?id=t2:expansion_kit). Don't forget [First Time Configuration](https://www.consoletuner.com/wiki/index.php?id=t2:expansion_kit#first_time_configuration)!
 
-5. Pair up Joy-cons with Titan Two following [instruction](https://www.consoletuner.com/wiki/index.php?id=t2:usage_guides:controllers:switch). You may need to sleep Nintendo Switch to avoid Joy-cons paired up with Nintendo Switch unexpectedly. 
+5. Pair up the 2 Joy-cons with Titan Two following [instruction](https://www.consoletuner.com/wiki/index.php?id=t2:usage_guides:controllers:switch). You may need to sleep Nintendo Switch to avoid the Joy-cons paired up with Nintendo Switch unexpectedly. 
 
-6. Install [ringfit_megaman.gpc](https://github.com/Minyus/RingFit_MegaMan/blob/master/ringfit_megaman.gpc) script to a memory slot (e.g. 1) of Titan Two following the [instruction](https://www.consoletuner.com/wiki/index.php?id=t2:gpc_scripting).
+6. Download and Install [ringfit_megaman.gpc](https://github.com/Minyus/RingFit_MegaMan/blob/master/ringfit_megaman.gpc) script to a memory slot (e.g. 1) of Titan Two following the [instruction](https://www.consoletuner.com/wiki/index.php?id=t2:gpc_scripting).
 
-7. Connect Titan Two to your Nintendo Switch Dock (using "Output" connector of Titan Two).
+7. Connect Titan Two to your Nintendo Switch Dock (using "Output" connector of Titan Two). Use an additional Micro-USB cable if you have so you can monitor the signals from Joy-Cons in Gtuner IV application. Otherwise, you need to disconnect the Micro-USB cable that connects Titan Two and PC.
 
 8. Install the 2 Joy-Cons to Ring-Con and leg strap, respectively.
 
