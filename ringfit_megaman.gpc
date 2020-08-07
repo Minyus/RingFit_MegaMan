@@ -1,5 +1,7 @@
 #pragma METAINFO("ringfit_megaman", 1, 0, "Minyus")
 
+int jump_for = 0;
+
 main {
 
 		
@@ -57,8 +59,8 @@ main {
 	// ACCEL_1_Z < 2 -> Squat
 	if(get_val(ACCEL_1_Z) < 2.00)
 		{
-			if(get_val(ACCEL_2_Z) > 10.00) combo_run(BigJump);
-			else combo_run(SmallJump);
+			jump_for = (int)clamp(get_val(ACCEL_2_Z) * 30.00, 1.00, 300.00);
+			combo_run(Jump);
 		}
 }
 
@@ -78,18 +80,10 @@ combo RightToLeft
 
 
 // Button_16 (B Button) = 100 -> Jump
-combo SmallJump
+combo Jump
 {
 	wait(1);
 	set_val(BUTTON_16, 100.00);
-	wait(150);
-	set_val(BUTTON_16, 0.00);
-}
-
-combo BigJump
-{
-	wait(1);
-	set_val(BUTTON_16, 100.00);
-	wait(300);
+	wait(jump_for);
 	set_val(BUTTON_16, 0.00);
 }
