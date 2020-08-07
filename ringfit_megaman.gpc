@@ -1,5 +1,13 @@
 #pragma METAINFO("ringfit_megaman", 1, 0, "Minyus")
 
+fix32 ema;
+bool jumping;
+
+init {
+	ema = 25.00;
+	jumping = FALSE;
+}
+
 main {
 
 	// RingCon
@@ -47,27 +55,23 @@ main {
 	set_val(BUTTON_13, 0.00);
 	
 	// ACCEL_1_Z = Squat level
-	if(get_val(ACCEL_1_Z) < 0.00) combo_run(Jump);
-
+	ema = 0.95 * ema + 0.05 * get_val(ACCEL_1_Z);
+	if(!jumping && ema < 0.00) 
+		{
+			jumping = TRUE;
+			combo_run(Jump);
+		}
+	if(jumping && (ema > 8.00))
+		{
+			jumping = FALSE;
+			combo_stop(Jump);
+		}
 }
 
-// Button_16 => B Button >> Jump
+// Button_16 => B Button >> Jumps
 combo Jump
 {
-	wait(100);
-	if(get_val(ACCEL_1_Z) < 0.00) set_val(BUTTON_16, 100.00);
-	wait(100);
-	if(get_val(ACCEL_1_Z) < 0.00) set_val(BUTTON_16, 100.00);
-	wait(100);
-	if(get_val(ACCEL_1_Z) < 0.00) set_val(BUTTON_16, 100.00);
-	wait(100);
-	if(get_val(ACCEL_1_Z) < 0.00) set_val(BUTTON_16, 100.00);
-	wait(100);
-	if(get_val(ACCEL_1_Z) < 0.00) set_val(BUTTON_16, 100.00);
-	wait(100);
-	if(get_val(ACCEL_1_Z) < 0.00) set_val(BUTTON_16, 100.00);
-	wait(100);
-	if(get_val(ACCEL_1_Z) < 0.00) set_val(BUTTON_16, 100.00);
-	wait(100);
-	if(get_val(ACCEL_1_Z) < 0.00) set_val(BUTTON_16, 100.00);
+	set_val(BUTTON_16, 100.00);
+	wait(2000);
+	jumping = FALSE;
 }
