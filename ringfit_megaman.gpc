@@ -1,16 +1,5 @@
 #pragma METAINFO("ringfit_megaman", 1, 0, "Minyus")
 
-fix32 ema;
-bool jumping;
-fix32 min_accel;
-bool stick_up;
-
-init {
-	ema = 25.00;
-	jumping = FALSE;
-	min_accel = 25.00;
-}
-
 main {
 
 		
@@ -95,7 +84,6 @@ combo SmallJump
 	set_val(BUTTON_16, 100.00);
 	wait(150);
 	set_val(BUTTON_16, 0.00);
-	jumping = FALSE;
 }
 
 combo BigJump
@@ -104,5 +92,4 @@ combo BigJump
 	set_val(BUTTON_16, 100.00);
 	wait(300);
 	set_val(BUTTON_16, 0.00);
-	jumping = FALSE;
 }
