@@ -52,6 +52,11 @@ The following steps worked for me (after struggling), but I can not guarantee in
 
 8. Install the 2 Joy-Cons to Ring-Con and leg strap, respectively.
 
+## Other games to play with Ring Fit Adventure controller
+
+- [Mario Kart X Ring Fit Adventure](https://www.controllerbend.com/mariokart-ring-fit.html)
+- [Animal Crossing X Ring Fit Adventure](https://www.controllerbend.com/animalcrossing_ringfit.html)
+- [Zelda: Breath of the Wild X Ring Fit Adventure](https://www.controllerbend.com/ringfitbotw.html)
 
 ## References for gpc scripting
 
