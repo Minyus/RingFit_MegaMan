@@ -50,7 +50,13 @@ The following steps worked for me (after struggling), but I can not guarantee in
 
 7. Connect Titan Two to your Nintendo Switch Dock (using "Output" connector of Titan Two). Use an additional Micro-USB cable if you have so you can monitor the signals from Joy-Cons in Gtuner IV application. Otherwise, you need to disconnect the Micro-USB cable that connects Titan Two and PC.
 
-8. Install the 2 Joy-Cons to Ring-Con and leg strap, respectively.
+8. Set the number indicated by LED on Titan Two to 0 by pressing the DOWN/UP button and start Mega Man in Nintendo Switch.
+
+9. Set the number indicated by LED on Titan Two to the memory slot number (e.g. 1) to enable the installed gpc script.
+
+10. Install the 2 Joy-Cons to Ring-Con and leg strap, respectively.
+
+11. Enjoy!
 
 ## Other games to play with Ring Fit Adventure controller
 
