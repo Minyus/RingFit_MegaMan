@@ -2,6 +2,8 @@
 
 ![Mega Man Legacy Collection](https://www.nintendo.com/content/dam/noa/en_US/games/switch/m/mega-man-legacy-collection-switch/mega-man-legacy-collection-switch-hero.jpg)
 
+![architecture](https://raw.githubusercontent.com/Minyus/RingFit_MegaMan/blob/master/img/architecture.drawio.svg)
+
 Instruction to play Mega Man (known as Rock Man in Japan) using Ring Fit Adventure controller for exercise
 
 ## How to play Mega Man in Ring Fit way
