@@ -24,9 +24,9 @@ Instruction to play Mega Man (known as Rock Man in Japan) using Ring Fit Adventu
 - [ringfit_megaman_squatbuster.gpc](https://github.com/Minyus/RingFit_MegaMan/blob/master/ringfit_megaman_squatbuster.gpc)
 - Squat to fire a Mega Buster shot.
 - Tilt the Ring-Con to left/right to move.
-- Tilt the Ring-Con to backward to climb up ladders.
-- Tilt the Ring-Con to forward slightly to climb down ladders.
-- Tile the Ring-Con to forward to jump.
+- Tile the Ring-Con to backward to jump.
+- Tilt the Ring-Con to backward slightly to climb up ladders.
+- Tilt the Ring-Con to forward to climb down ladders.
 - [Unsupported] Charge shot (action introduced in Mega Man 4)
 - [Unsupported] Sliding (action introduced in Mega Man 3)
 
