@@ -48,7 +48,7 @@ The following steps worked for me (after struggling), but I can not guarantee in
 
 5. Pair up the 2 Joy-cons with Titan Two following [instruction](https://www.consoletuner.com/wiki/index.php?id=t2:usage_guides:controllers:switch). You may need to sleep Nintendo Switch to avoid the Joy-cons paired up with Nintendo Switch unexpectedly. 
 
-6. Download and Install [ringfit_megaman.gpc](https://github.com/Minyus/RingFit_MegaMan/blob/master/ringfit_megaman.gpc) script to a memory slot (e.g. 1) of Titan Two following the [instruction](https://www.consoletuner.com/wiki/index.php?id=t2:gpc_scripting).
+6. Download and Install [ringfit_megaman_squatjump.gpc](https://github.com/Minyus/RingFit_MegaMan/blob/master/ringfit_megaman_squatjump.gpc) script to a memory slot (e.g. 1) of Titan Two following the [instruction](https://www.consoletuner.com/wiki/index.php?id=t2:gpc_scripting).
 
 7. Connect Titan Two to your Nintendo Switch Dock (using "Output" connector of Titan Two). Use an additional Micro-USB cable if you have so you can monitor the signals from Joy-Cons in Gtuner IV application. Otherwise, you need to disconnect the Micro-USB cable that connects Titan Two and PC.
 
