@@ -74,6 +74,15 @@ main {
 	set_val(BUTTON_11, 0.00);
 	set_val(BUTTON_12, 0.00);
 	set_val(BUTTON_13, 0.00);
+
+	// Allow using the stick on Ring-Con
+	if(get_val(STICK_1_X) > 50.00) set_val(STICK_2_Y, 100.00);
+	if(get_val(STICK_1_X) < -50.00) set_val(STICK_2_Y, -100.00);
+	if(get_val(STICK_1_Y) > 50.00) set_val(STICK_2_X, -100.00);
+	if(get_val(STICK_1_Y) < -50.00) set_val(STICK_2_X, 100.00);
+	
+	// Allow using button A to jump on Ring-Con
+	if(get_val(BUTTON_15) > 50.00) set_val(BUTTON_16, 100.00);
 	
 	// ACCEL_1_Z < 2 -> Squat
 	if(get_val(ACCEL_1_Z) < 0.00)
