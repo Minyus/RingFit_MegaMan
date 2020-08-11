@@ -8,16 +8,28 @@ Instruction to play Mega Man (known as Rock Man in Japan) using Ring Fit Adventu
 
 ## How to play Mega Man in Ring Fit way
 
+### Option 1: 
+
+- [ringfit_megaman_squatjump.gpc](https://github.com/Minyus/RingFit_MegaMan/blob/master/ringfit_megaman_squatjump.gpc)
 - Squeeze or pull the Ring-Con to fire a Mega Buster shot.
 - Tilt the Ring-Con to left/right to move. 
 - Tilt the Ring-Con to backward to climb up ladders.
 - Tilt the Ring-Con to backward while squatting to jump. You will jump as high as the Ring-Con tilted backward.
 - Tilt the Ring-Con to forward to climb down ladders.
 - Tilt the Ring-Con to forward while squatting to slide (action introduced in Mega Man 3).
+- [Unsupported] Charge shot (action introduced in Mega Man 4)
 
-## Planning to support in the future
+### Option 2:
 
-- Charge shot (action introduced in Mega Man 4)
+- [ringfit_megaman_squatbuster.gpc](https://github.com/Minyus/RingFit_MegaMan/blob/master/ringfit_megaman_squatbuster.gpc)
+- Squat to fire a Mega Buster shot.
+- Tilt the Ring-Con to left/right to move.
+- Tilt the Ring-Con to backward to climb up ladders.
+- Tilt the Ring-Con to forward slightly to climb down ladders.
+- Tile the Ring-Con to forward to jump.
+- [Unsupported] Charge shot (action introduced in Mega Man 4)
+- [Unsupported] Sliding (action introduced in Mega Man 3)
+
 
 ## Instruction to set up
 
@@ -48,7 +60,7 @@ The following steps worked for me (after struggling), but I can not guarantee in
 
 5. Pair up the 2 Joy-cons with Titan Two following [instruction](https://www.consoletuner.com/wiki/index.php?id=t2:usage_guides:controllers:switch). You may need to sleep Nintendo Switch to avoid the Joy-cons paired up with Nintendo Switch unexpectedly. 
 
-6. Download and Install [ringfit_megaman_squatjump.gpc](https://github.com/Minyus/RingFit_MegaMan/blob/master/ringfit_megaman_squatjump.gpc) script to a memory slot (e.g. 1) of Titan Two following the [instruction](https://www.consoletuner.com/wiki/index.php?id=t2:gpc_scripting).
+6. Download and Install a GPC script ([ringfit_megaman_squatjump.gpc](https://github.com/Minyus/RingFit_MegaMan/blob/master/ringfit_megaman_squatjump.gpc) or [ringfit_megaman_squatbuster.gpc](https://github.com/Minyus/RingFit_MegaMan/blob/master/ringfit_megaman_squatbuster.gpc)) to a memory slot (e.g. 1) of Titan Two following the [instruction](https://www.consoletuner.com/wiki/index.php?id=t2:gpc_scripting).
 
 7. Connect Titan Two to your Nintendo Switch Dock (using "Output" connector of Titan Two). Use an additional Micro-USB cable if you have so you can monitor the signals from Joy-Cons in Gtuner IV application. Otherwise, you need to disconnect the Micro-USB cable that connects Titan Two and PC.
 

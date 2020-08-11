@@ -1,0 +1,93 @@
+#pragma METAINFO("ringfit_megaman_squatbuster", 2, 00, "Minyus")
+
+/*
+Ring Fit Mega Man: Squat for Buster
+
+[How to play Mega Man]
+Squat to fire a Mega Buster shot.
+Tilt the Ring-Con to left/right to move.
+Tilt the Ring-Con to backward to climb up ladders.
+Tilt the Ring-Con to forward slightly to climb down ladders.
+Tile the Ring-Con to forward to jump.
+
+[Not supported]
+Sliding (action introduced in Mega Man 3)
+Charge shot (action introduced in Mega Man 4)
+
+https://github.com/Minyus/RingFit_MegaMan
+
+*/
+
+main {
+
+		
+	// ACCEL_2_Y > 0 = Tilt to right
+	if(get_val(ACCEL_2_Y) > 15.00)
+		{
+			// Stick_2_X = 100 -> Stick_2 Right
+			set_val(STICK_2_X, 100.00);
+		}
+	if(get_val(ACCEL_2_Y) < -15.00)
+		{
+			// Stick_2_X = -100 -> Stick_2 Left
+			set_val(STICK_2_X, -100.00);
+		}
+
+	if((get_prev(ACCEL_2_Y) < 10.00) && (get_val(ACCEL_2_Y) >= 10.00))
+		{
+			combo_run(LeftToRight);
+		}
+
+	if((get_prev(ACCEL_2_Y) >= -10.00) && (get_val(ACCEL_2_Y) < -10.00))
+		{
+			combo_run(RightToLeft);
+		}
+	
+	// ACCEL_2_Z > 0 -> Tilt to backward
+	if(get_val(ACCEL_2_Z) >= 12.00)
+		{
+			// Button_16 (B Button) = 100 -> Jump
+			set_val(BUTTON_16, 100.00);
+		}
+	if(
+		(get_val(ACCEL_2_Z) >= 0.00) && 
+		(get_val(ACCEL_2_Z) < 12.00)
+		)
+		{
+			// Stick_2 = -100 -> Up
+			set_val(STICK_2_Y, -100.00);
+		}
+	if(get_val(ACCEL_2_Z) < -12.00)
+		{
+			// Stick_2 = 100 -> Down
+			set_val(STICK_2_Y, 100.00);
+		}
+
+	
+	// Disable
+	set_val(BUTTON_10, 0.00);
+	set_val(BUTTON_11, 0.00);
+	set_val(BUTTON_12, 0.00);
+	set_val(BUTTON_13, 0.00);
+	
+	// ACCEL_1_Z < 2 -> Squat
+	if(get_val(ACCEL_1_Z) < 0.00)
+		{
+			// BUTTON_17 (Y Button) -> Buster
+			set_val(BUTTON_17, 100.00);
+		}
+}
+
+combo LeftToRight
+{
+	set_val(STICK_2_X, 100.00);
+	wait(1);
+	set_val(STICK_2_X, 0.00);
+}
+
+combo RightToLeft
+{
+	set_val(STICK_2_X, -100.00);
+	wait(1);
+	set_val(STICK_2_X, 0.00);
+}
