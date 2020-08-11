@@ -1,4 +1,22 @@
-#pragma METAINFO("ringfit_megaman", 1, 0, "Minyus")
+#pragma METAINFO("ringfit_megaman", 1, 00, "Minyus")
+
+/*
+Ring Fit Mega Man: Squat for Jump
+
+[How to play Mega Man]
+Squeeze or pull the Ring-Con to fire a Mega Buster shot.
+Tilt the Ring-Con to left/right to move.
+Tilt the Ring-Con to backward to climb up ladders.
+Tilt the Ring-Con to backward while squatting to jump. You will jump as high as the Ring-Con tilted backward.
+Tilt the Ring-Con to forward to climb down ladders.
+Tilt the Ring-Con to forward while squatting to slide (action introduced in Mega Man 3).
+
+[Not supported]
+Charge shot (action introduced in Mega Man 4)
+
+https://github.com/Minyus/RingFit_MegaMan
+
+*/
 
 int jump_for = 0;
 
@@ -17,12 +35,12 @@ main {
 			set_val(STICK_2_X, -100.00);
 		}
 
-	if((get_prev(ACCEL_2_Y) < 0.00) && (get_val(ACCEL_2_Y) >= 0.00))
+	if((get_prev(ACCEL_2_Y) < 10.00) && (get_val(ACCEL_2_Y) >= 10.00))
 		{
 			combo_run(LeftToRight);
 		}
 
-	if((get_prev(ACCEL_2_Y) >= 0.00) && (get_val(ACCEL_2_Y) < 0.00))
+	if((get_prev(ACCEL_2_Y) >= -10.00) && (get_val(ACCEL_2_Y) < -10.00))
 		{
 			combo_run(RightToLeft);
 		}
@@ -67,14 +85,14 @@ main {
 combo LeftToRight
 {
 	set_val(STICK_2_X, 100.00);
-	wait(10);
+	wait(1);
 	set_val(STICK_2_X, 0.00);
 }
 
 combo RightToLeft
 {
 	set_val(STICK_2_X, -100.00);
-	wait(10);
+	wait(1);
 	set_val(STICK_2_X, 0.00);
 }
 
