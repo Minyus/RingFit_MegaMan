@@ -22,12 +22,12 @@ main {
 
 		
 	// ACCEL_2_Y > 0 = Tilt to right
-	if(get_val(ACCEL_2_Y) > 15.00)
+	if(get_val(ACCEL_2_Y) > 5.00)
 		{
 			// Stick_2_X = 100 -> Stick_2 Right
 			set_val(STICK_2_X, 100.00);
 		}
-	if(get_val(ACCEL_2_Y) < -15.00)
+	if(get_val(ACCEL_2_Y) < -5.00)
 		{
 			// Stick_2_X = -100 -> Stick_2 Left
 			set_val(STICK_2_X, -100.00);
@@ -44,14 +44,19 @@ main {
 		}
 	
 	// ACCEL_2_Z > 0 -> Tilt to backward
-	if(get_val(ACCEL_2_Z) >= 12.00)
+	if(get_val(ACCEL_2_Z) >= 6.00)
 		{
 			// Button_16 (B Button) = 100 -> Jump
-			set_val(BUTTON_16, 100.00);
+			combo_run(Jump);
 		}
+	if(get_val(ACCEL_2_Z) < 2.00)
+		{
+			combo_stop(Jump);
+		}
+		
 	if(
-		(get_val(ACCEL_2_Z) >= 0.00) && 
-		(get_val(ACCEL_2_Z) < 12.00)
+		(get_val(ACCEL_2_Z) >= -2.00) && 
+		(get_val(ACCEL_2_Z) < 6.00)
 		)
 		{
 			// Stick_2 = -100 -> Up
@@ -90,4 +95,9 @@ combo RightToLeft
 	set_val(STICK_2_X, -100.00);
 	wait(1);
 	set_val(STICK_2_X, 0.00);
+}
+
+combo Jump
+{
+	set_val(BUTTON_16, 100.00);
 }
