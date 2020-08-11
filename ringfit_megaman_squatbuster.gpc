@@ -6,9 +6,9 @@ Ring Fit Mega Man: Squat for Buster
 [How to play Mega Man]
 Squat to fire a Mega Buster shot.
 Tilt the Ring-Con to left/right to move.
-Tile the Ring-Con to backward to jump.
-Tilt the Ring-Con to backward slightly to climb up ladders.
-Tilt the Ring-Con to forward to climb down ladders.
+Tilt the Ring-Con to backward to climb up ladders.
+Tilt the Ring-Con to forward slightly to climb down ladders.
+Tile the Ring-Con to forward to jump.
 
 [Not supported]
 Sliding (action introduced in Mega Man 3)
@@ -33,12 +33,12 @@ main {
 			set_val(STICK_2_X, -100.00);
 		}
 
-	if((get_prev(ACCEL_2_Y) < 10.00) && (get_val(ACCEL_2_Y) >= 10.00))
+	if((get_prev(ACCEL_2_Y) < 0.00) && (get_val(ACCEL_2_Y) >= 0.00))
 		{
 			combo_run(LeftToRight);
 		}
 
-	if((get_prev(ACCEL_2_Y) >= -10.00) && (get_val(ACCEL_2_Y) < -10.00))
+	if((get_prev(ACCEL_2_Y) >= -0.00) && (get_val(ACCEL_2_Y) < -0.00))
 		{
 			combo_run(RightToLeft);
 		}

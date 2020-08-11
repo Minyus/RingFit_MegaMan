@@ -35,12 +35,12 @@ main {
 			set_val(STICK_2_X, -100.00);
 		}
 
-	if((get_prev(ACCEL_2_Y) < 10.00) && (get_val(ACCEL_2_Y) >= 10.00))
+	if((get_prev(ACCEL_2_Y) < 0.00) && (get_val(ACCEL_2_Y) >= 0.00))
 		{
 			combo_run(LeftToRight);
 		}
 
-	if((get_prev(ACCEL_2_Y) >= -10.00) && (get_val(ACCEL_2_Y) < -10.00))
+	if((get_prev(ACCEL_2_Y) >= -0.00) && (get_val(ACCEL_2_Y) < -0.00))
 		{
 			combo_run(RightToLeft);
 		}
