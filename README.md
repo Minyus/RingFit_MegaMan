@@ -13,22 +13,21 @@ Instruction to play Mega Man (known as Rock Man in Japan) using Ring Fit Adventu
 - Programmed in [ringfit_megaman_squatbuster.gpc](https://github.com/Minyus/RingFit_MegaMan/blob/master/ringfit_megaman_squatbuster.gpc).
 - Squat to fire a Mega Buster shot.
 - Tilt the Ring-Con to left/right to move.
-- Tile the Ring-Con to backward to jump.
-- Tilt the Ring-Con to backward slightly to climb up ladders.
-- Tilt the Ring-Con to forward to climb down ladders.
+- Tilt the Ring-Con to backward (lift) slightly to climb up ladders.
+- Tilt the Ring-Con to forward (put down) to climb down ladders.
+- Tilt the Ring-Con to backward (lift) or press button A or B to jump. Recommended to hold the Ring-Con at the positions above the grips to press a button.
+- Tilt the Ring-Con to forward (put down) and press button A or B to slide (action introduced in Mega Man 3).
 - [Unsupported] Charge shot (action introduced in Mega Man 4)
-- [Unsupported] Sliding (action introduced in Mega Man 3)
-- The stick and buttons on the right Joy-Con attached sideways to Ring-Con can be used alternatively to pass stages too difficult to play with motion control but yet with the left Joy-Con for leg exercise.
 
 ### Option 2: 
 
 - Programmed in [ringfit_megaman_squatjump.gpc](https://github.com/Minyus/RingFit_MegaMan/blob/master/ringfit_megaman_squatjump.gpc).
 - Squeeze or pull the Ring-Con to fire a Mega Buster shot.
 - Tilt the Ring-Con to left/right to move. 
-- Tilt the Ring-Con to backward to climb up ladders.
-- Tilt the Ring-Con to backward while squatting to jump. You will jump as high as the Ring-Con tilted backward.
-- Tilt the Ring-Con to forward to climb down ladders.
-- Tilt the Ring-Con to forward while squatting to slide (action introduced in Mega Man 3).
+- Tilt the Ring-Con to backward (lift) to climb up ladders.
+- Tilt the Ring-Con to forward (put down) to climb down ladders.
+- Tilt the Ring-Con to backward (lift) while squatting to jump. You will jump as high as the Ring-Con tilted backward.
+- Tilt the Ring-Con to forward (put down) while squatting to slide (action introduced in Mega Man 3).
 - [Unsupported] Charge shot (action introduced in Mega Man 4)
 
 
