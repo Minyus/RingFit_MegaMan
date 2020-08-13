@@ -1,12 +1,14 @@
 # Ring Fit Mega Man
 
-![Mega Man Legacy Collection](https://www.nintendo.com/content/dam/noa/en_US/games/switch/m/mega-man-legacy-collection-switch/mega-man-legacy-collection-switch-hero.jpg)
+![RingFit_MegaMan](img/RingFit_MegaMan.jpg)
 
 ![architecture](img/architecture.drawio.svg)
 
-Instruction to play Mega Man (known as Rock Man in Japan) using Ring Fit Adventure controller for exercise
+Instruction to play Mega Man (known as Rockman in Japan) using Ring Fit Adventure controller for exercise
 
 ## How to play Mega Man in Ring Fit way
+
+![RingCon](img/RingCon.jpg)
 
 ### Option 1 (Recommended):
 
@@ -58,7 +60,7 @@ The following steps worked for me (after struggling), but I can not guarantee in
 
 4. Install Titan Expansion Kit to Titan Two and connect to your PC (using "PROG" connector of Titan Two) following the [instruction](https://www.consoletuner.com/wiki/index.php?id=t2:expansion_kit). Don't forget [First Time Configuration](https://www.consoletuner.com/wiki/index.php?id=t2:expansion_kit#first_time_configuration)!
 
-5. Pair up the 2 Joy-cons with Titan Two following [instruction](https://www.consoletuner.com/wiki/index.php?id=t2:usage_guides:controllers:switch). You may need to sleep Nintendo Switch to avoid the Joy-cons paired up with Nintendo Switch unexpectedly. 
+5. Pair up the 2 Joy-cons with Titan Two following [instruction](https://www.consoletuner.com/wiki/index.php?id=t2:usage_guides:controllers:switch). You may need to sleep Nintendo Switch to avoid the Joy-Cons paired up with Nintendo Switch unexpectedly. 
 
 6. Download and Install a GPC script ([ringfit_megaman_squatbuster.gpc](https://github.com/Minyus/RingFit_MegaMan/blob/master/ringfit_megaman_squatbuster.gpc) or [ringfit_megaman_squatjump.gpc](https://github.com/Minyus/RingFit_MegaMan/blob/master/ringfit_megaman_squatjump.gpc)) to a memory slot (e.g. 1) of Titan Two following the [instruction](https://www.consoletuner.com/wiki/index.php?id=t2:gpc_scripting).
 
