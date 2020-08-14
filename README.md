@@ -84,3 +84,9 @@ The following steps worked for me (after struggling), but I can not guarantee in
 
 - https://www.consoletuner.com/wiki/index.php?id=t2:gpc_language_reference
 - https://www.consoletuner.com/wiki/index.php?id=t2:gpc_scripting:examples_1
+
+## Author
+
+Yusuke Minami
+
+Twitter: [@Minyus86](https://twitter.com/Minyus86)
