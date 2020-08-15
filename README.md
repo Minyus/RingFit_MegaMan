@@ -71,7 +71,7 @@ The following steps worked for me (after struggling), but I can not guarantee in
 9. Wake up Nintendo Switch by pressing the power button. 
 
 10. Press the UP button on Titan Two once to activate. Nintendo Switch should recognize Titan Two as a Pro controller connected via USB.
-![USB_Controller_for_Switch](img/USB_Controller_for_Switch.jpg)
+![USB_controller_for_Switch](img/USB_controller_for_Switch.jpg)
 
 11. Set the number indicated by LED on Titan Two to "0" by pressing the UP button once or more times to use the Joy-Cons with the installed GPC program disabled.
 
