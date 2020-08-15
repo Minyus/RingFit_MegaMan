@@ -19,7 +19,7 @@ Instruction to play Mega Man (known as Rockman in Japan) using Ring Fit Adventur
 - Tilt the Ring-Con to backward (lift) or press button A or B to jump. Recommended to hold the Ring-Con at the positions above the grips to press a button.
 ![RingCon](img/RingCon.jpg)
 - Tilt the Ring-Con to forward (put down) and press button A or B to slide (action introduced in Mega Man 3).
-- [Unsupported] Charge shot (action introduced in Mega Man 4)
+- Keep your leg bent to charge a shot (action introduced in Mega Man 4)
 
 ### Option 2: 
 
