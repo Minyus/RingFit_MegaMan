@@ -8,7 +8,6 @@ Instruction to play Mega Man (known as Rockman in Japan) using Ring Fit Adventur
 
 ## How to play Mega Man in Ring Fit way
 
-![RingCon](img/RingCon.jpg)
 
 ### Option 1 (Recommended):
 
@@ -18,6 +17,7 @@ Instruction to play Mega Man (known as Rockman in Japan) using Ring Fit Adventur
 - Tilt the Ring-Con to backward (lift) slightly to climb up ladders.
 - Tilt the Ring-Con to forward (put down) to climb down ladders.
 - Tilt the Ring-Con to backward (lift) or press button A or B to jump. Recommended to hold the Ring-Con at the positions above the grips to press a button.
+![RingCon](img/RingCon.jpg)
 - Tilt the Ring-Con to forward (put down) and press button A or B to slide (action introduced in Mega Man 3).
 - [Unsupported] Charge shot (action introduced in Mega Man 4)
 
@@ -43,7 +43,7 @@ The following steps worked for me (after struggling), but I can not guarantee in
 0. Prepare hardware
 
     - [Nintendo Switch, Dock, and Joy-Cons](https://www.nintendo.com/switch/)
-    - [Ring-Con and leg strap that comes with Ring Fit Adventure](https://www.nintendo.com/games/detail/ring-fit-adventure-switch/)
+    - [Ring Fit Adventure controller (Ring-Con and leg strap)](https://www.nintendo.com/games/detail/ring-fit-adventure-switch/)
 
     - [Titan Two](https://www.consoletuner.com/products/titan-two/)
     - [Titan Expansion Kit](https://www.consoletuner.com/products/titan-two/) (to connect Joy-Cons with Titan Two via Bluetooth)
@@ -54,25 +54,34 @@ The following steps worked for me (after struggling), but I can not guarantee in
 
 1. Purchase and download [Mega Man Legacy Collection](https://www.nintendo.com/games/detail/mega-man-legacy-collection-switch/) to your Nintendo Switch.
 
-2. Turn on "Pro Controller Wired Communication" in Nintendo Switch following the [instruction](https://www.nintendo.co.uk/Support/Nintendo-Switch/How-to-Enable-Disable-Nintendo-Switch-Pro-Controller-Wired-Communication-1516284.html) to use Titan Two later.
+2. Turn on "Pro Controller Wired Communication" in Nintendo Switch following the [instruction](https://www.nintendo.co.uk/Support/Nintendo-Switch/How-to-Enable-Disable-Nintendo-Switch-Pro-Controller-Wired-Communication-1516284.html) to recognize Titan Two in the later step.
 
-3. Download and Install [Gtuner IV](https://www.consoletuner.com/downloads/?) to your Windows or Mac computer.
+3. Download and Install [Gtuner IV](https://www.consoletuner.com/downloads/?) to your PC (Windows or Mac computer).
 
-4. Install Titan Expansion Kit to Titan Two and connect to your PC (using "PROG" connector of Titan Two) following the [instruction](https://www.consoletuner.com/wiki/index.php?id=t2:expansion_kit). Don't forget [First Time Configuration](https://www.consoletuner.com/wiki/index.php?id=t2:expansion_kit#first_time_configuration)!
+4. Install Titan Expansion Kit to Titan Two and connect Titan Two (Micro-USB port labeled "PROG") to your PC following the [instruction](https://www.consoletuner.com/wiki/index.php?id=t2:expansion_kit). [Note] Don't forget [First Time Configuration](https://www.consoletuner.com/wiki/index.php?id=t2:expansion_kit#first_time_configuration)!
 
-5. Pair up the 2 Joy-cons with Titan Two following [instruction](https://www.consoletuner.com/wiki/index.php?id=t2:usage_guides:controllers:switch). You may need to sleep Nintendo Switch to avoid the Joy-Cons paired up with Nintendo Switch unexpectedly. 
+5. Sleep Nintendo Switch to avoid the Joy-Cons directly paired up with Nintendo Switch unexpectedly. 
 
-6. Download and Install a GPC script ([ringfit_megaman_squatbuster.gpc](https://github.com/Minyus/RingFit_MegaMan/blob/master/ringfit_megaman_squatbuster.gpc) or [ringfit_megaman_squatjump.gpc](https://github.com/Minyus/RingFit_MegaMan/blob/master/ringfit_megaman_squatjump.gpc)) to a memory slot (e.g. 1) of Titan Two following the [instruction](https://www.consoletuner.com/wiki/index.php?id=t2:gpc_scripting).
+6. Pair up the 2 Joy-Cons (one by one) with Titan Two via Bluetooth following [instruction](https://www.consoletuner.com/wiki/index.php?id=t2:usage_guides:controllers:switch). If you choose Pairing Method A (recommended), please note that UP button is the button located in the right side of the number LED and labeled (misleading) down-pointing triangle.
 
-7. Connect Titan Two to your Nintendo Switch Dock (using "Output" connector of Titan Two). Use an additional Micro-USB cable if you have so you can monitor the signals from Joy-Cons in Gtuner IV application. Otherwise, you need to disconnect the Micro-USB cable that connects Titan Two and PC.
+7. Download and Install a GPC script ([ringfit_megaman_squatbuster.gpc](https://github.com/Minyus/RingFit_MegaMan/blob/master/ringfit_megaman_squatbuster.gpc) or [ringfit_megaman_squatjump.gpc](https://github.com/Minyus/RingFit_MegaMan/blob/master/ringfit_megaman_squatjump.gpc)) to a memory slot (e.g. 1) of Titan Two following the [instruction](https://www.consoletuner.com/wiki/index.php?id=t2:gpc_scripting).
 
-8. Set the number indicated by LED on Titan Two to 0 by pressing the DOWN/UP button and start Mega Man in Nintendo Switch.
+8. Connect Titan Two (Micro-USB port labeled "OUTPUT") to your Nintendo Switch Dock (one of the USB ports). Use an additional Micro-USB cable if you have so you can monitor the signals from Joy-Cons in Gtuner IV application's GUI. Otherwise, you need to disconnect the Micro-USB cable that connects Titan Two and PC, which is not recommended.
 
-9. Set the number indicated by LED on Titan Two to the memory slot number (e.g. 1) to enable the installed gpc script.
+9. Wake up Nintendo Switch by pressing the power button. 
 
-10. Install the 2 Joy-Cons to Ring-Con and leg strap, respectively.
+10. Press the UP button on Titan Two once to activate. Nintendo Switch should recognize Titan Two as a Pro controller connected via USB.
+![USB_Controller_for_Switch](img/USB_Controller_for_Switch.jpg)
 
-11. Enjoy!
+11. Set the number indicated by LED on Titan Two to "0" by pressing the UP button once or more times to use the Joy-Cons with the installed GPC program disabled.
+
+12. Start Mega Man in Nintendo Switch.
+
+13. Install the 2 Joy-Cons to Ring-Con and leg strap, respectively.
+
+14. Set the number indicated by LED on Titan Two to the memory slot number (e.g. 1) by pressing the UP button once or more times to enable the installed GPC program.
+
+15. Enjoy!
 
 ## Other games to play with Ring Fit Adventure controller
 
