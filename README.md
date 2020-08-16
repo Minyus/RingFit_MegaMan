@@ -63,9 +63,10 @@ The following steps worked for me (after struggling), but I can not guarantee in
 5. Sleep Nintendo Switch to avoid the Joy-Cons directly paired up with Nintendo Switch unexpectedly. 
 
 6. Pair up the 2 Joy-Cons (one by one) with Titan Two via Bluetooth following [instruction](https://www.consoletuner.com/wiki/index.php?id=t2:usage_guides:controllers:switch). Pairing Method B using Gtuner IV is recommended. If you choose Pairing Method A, please note that UP button is the button located in the right side of the number LED and labeled (misleading) down-pointing triangle. Once the 2 Joy-Cons are paired up with Titan Two, `Joy-Con Right [IN]` and `Joy-Con Left [IN]` should appear in the "Device Monitor" tab of Gtuner IV's GUI.
-![GtunerIV_JoyCons](img/GtunerIV_JoyCons.png)
+![Gtuner_Device_Monitor](img/Gtuner_Device_Monitor.png)
 
 7. Download and Install a GPC script ([ringfit_megaman_squatbuster.gpc](https://github.com/Minyus/RingFit_MegaMan/blob/master/ringfit_megaman_squatbuster.gpc) or [ringfit_megaman_squatjump.gpc](https://github.com/Minyus/RingFit_MegaMan/blob/master/ringfit_megaman_squatjump.gpc)) to a memory slot (e.g. 1) of Titan Two following the [instruction](https://www.consoletuner.com/wiki/index.php?id=t2:gpc_scripting).
+![Gtuner_GPC_Script_IDE](img/Gtuner_GPC_Script_IDE.png)
 
 8. Connect Titan Two (Micro-USB port labeled "OUTPUT") to your Nintendo Switch Dock (one of the USB ports). Use an additional Micro-USB cable if you have so you can monitor the signals from Joy-Cons in Gtuner IV application's GUI. Otherwise, you need to disconnect the Micro-USB cable that connects Titan Two and PC, which is not recommended.
 
