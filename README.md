@@ -9,7 +9,7 @@ Instruction to play Mega Man (known as Rockman in Japan) using Ring Fit Adventur
 ## How to play Mega Man in Ring Fit way
 
 
-### Option 1 (Recommended):
+### Version 2 (Recommended)
 
 - Programmed in [ringfit_megaman_squatbuster.gpc](https://github.com/Minyus/RingFit_MegaMan/blob/master/ringfit_megaman_squatbuster.gpc).
 - Squat to fire a Mega Buster shot.
@@ -21,7 +21,7 @@ Instruction to play Mega Man (known as Rockman in Japan) using Ring Fit Adventur
 - Tilt the Ring-Con to forward (put down) and press button A or B to slide (action introduced in Mega Man 3).
 - Keep your leg bent to charge a shot (action introduced in Mega Man 4)
 
-### Option 2: 
+### Version 1 (Alternative)
 
 - Programmed in [ringfit_megaman_squatjump.gpc](https://github.com/Minyus/RingFit_MegaMan/blob/master/ringfit_megaman_squatjump.gpc).
 - Squeeze or pull the Ring-Con to fire a Mega Buster shot.
