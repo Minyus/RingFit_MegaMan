@@ -1,27 +1,13 @@
-#pragma METAINFO("ringfit_megaman_squatjump", 1, 00, "Minyus")
+#pragma METAINFO("github.com/Minyus/RingFit_MegaMan", 1, 00, "Yusuke Minami")
 
 /*
-Ring Fit Mega Man: Squat for Jump
-
-[How to play Mega Man]
-Squeeze or pull the Ring-Con to fire a Mega Buster shot.
-Tilt the Ring-Con to left/right to move.
-Tilt the Ring-Con to backward to climb up ladders.
-Tilt the Ring-Con to backward while squatting to jump. You will jump as high as the Ring-Con tilted backward.
-Tilt the Ring-Con to forward to climb down ladders.
-Tilt the Ring-Con to forward while squatting to slide (action introduced in Mega Man 3).
-
-[Not supported]
-Charge shot (action introduced in Mega Man 4)
-
+Ring Fit Mega Man Version 1: Squat for Jump
 https://github.com/Minyus/RingFit_MegaMan
-
 */
 
 int jump_for = 0;
 
 main {
-
 		
 	// ACCEL_2_Y > 0 = Tilt to right
 	if(get_val(ACCEL_2_Y) > 15.00)
@@ -73,7 +59,24 @@ main {
 	set_val(BUTTON_11, 0.00);
 	set_val(BUTTON_12, 0.00);
 	set_val(BUTTON_13, 0.00);
-	
+
+	// Allow using the stick on Right Joy-Con by rotating 90 degrees
+	if((get_actual(STICK_1_X) < -50.00) || (get_actual(STICK_1_X) > 50.00)) 
+		{
+			set_val(STICK_2_Y, get_actual(STICK_1_X));
+		}
+	if((get_actual(STICK_1_Y) < -50.00) || (get_actual(STICK_1_Y) > 50.00))
+		{
+			set_val(STICK_2_X, -1.00 * get_actual(STICK_1_Y));
+		}
+
+	// Allow using buttons on Right JoyCon by rotating 90 degrees
+	// BUTTON_14: X, BUTTON_15: A, BUTTON_16: B, BUTTON_17: Y
+	set_val(BUTTON_14, get_actual(BUTTON_17));
+	set_val(BUTTON_17, get_actual(BUTTON_16));
+	set_val(BUTTON_16, get_actual(BUTTON_15));
+	set_val(BUTTON_15, get_actual(BUTTON_14));
+
 	// ACCEL_1_Z < 2 -> Squat
 	if(get_val(ACCEL_1_Z) < 2.00)
 		{
