@@ -5,82 +5,157 @@ Ring Fit Mega Man Version 2: Squat for Buster
 https://github.com/Minyus/RingFit_MegaMan
 */
 
+/*
+References:
+https://www.consoletuner.com/wiki/index.php?id=t2:gpc_scripting
+https://www.consoletuner.com/wiki/index.php?id=t2:gpc_scripting:examples_1
+https://www.consoletuner.com/wiki/index.php?id=t2:switch_gph
+*/
+
+#ifndef SWITCH_GPH_
+#define SWITCH_GPH_
+ 
+#define SWITCH_HOME     BUTTON_1
+#define SWITCH_MINUS    BUTTON_2
+#define SWITCH_PLUS     BUTTON_3
+#define SWITCH_R        BUTTON_4
+#define SWITCH_ZR       BUTTON_5
+#define SWITCH_RS       BUTTON_6
+#define SWITCH_L        BUTTON_7
+#define SWITCH_ZL       BUTTON_8
+#define SWITCH_LS       BUTTON_9
+#define SWITCH_UP       BUTTON_10
+#define SWITCH_DOWN     BUTTON_11
+#define SWITCH_LEFT     BUTTON_12
+#define SWITCH_RIGHT    BUTTON_13
+#define SWITCH_X        BUTTON_14
+#define SWITCH_A        BUTTON_15
+#define SWITCH_B        BUTTON_16
+#define SWITCH_Y        BUTTON_17
+#define SWITCH_CAPTURE  BUTTON_18
+#define SWITCH_SL       BUTTON_19
+#define SWITCH_SR       BUTTON_20
+ 
+#define SWITCH_RX       STICK_1_X
+#define SWITCH_RY       STICK_1_Y
+#define SWITCH_LX       STICK_2_X
+#define SWITCH_LY       STICK_2_Y
+ 
+#define SWITCH_ACCX     ACCEL_1_X
+#define SWITCH_ACCY     ACCEL_1_Y
+#define SWITCH_ACCZ     ACCEL_1_Z
+
+#define SWITCH_JOYACCX     ACCEL_2_X
+#define SWITCH_JOYACCY     ACCEL_2_Y
+#define SWITCH_JOYACCZ     ACCEL_2_Z
+ 
+#define SWITCH_GYROX    GYRO_1_X
+#define SWITCH_GYROY    GYRO_1_Y
+#define SWITCH_GYROZ    GYRO_1_Z
+ 
+#endif /* SWITCH_GPH_ */
+
+fix32 RIGHT_THRESHOLD;
+fix32 LEFT_THRESHOLD;
+fix32 LEFT_TO_RIGHT_THRESHOLD;
+fix32 RIGHT_TO_LEFT_THRESHOLD;
+fix32 UP_THRESHOLD;
+fix32 DOWN_THRESHOLD;
+fix32 SQUAT_THRESHOLD;
+char SQUAT_TRIGGERING_BUTTON;
+
+/**/
+
+init {
+	RIGHT_THRESHOLD = 9.0;
+	LEFT_THRESHOLD = -9.0;
+	LEFT_TO_RIGHT_THRESHOLD = 0.0;
+	RIGHT_TO_LEFT_THRESHOLD = 0.0;
+	UP_THRESHOLD = 5.0;
+	DOWN_THRESHOLD = -10.0;
+	SQUAT_THRESHOLD = 0.0;
+	SQUAT_TRIGGERING_BUTTON = SWITCH_Y;
+}
+
 main {
 		
-	// ACCEL_2_Y > 0 = Tilt to right
-	if(get_val(ACCEL_2_Y) > 9.00)
+	if(get_val(SWITCH_JOYACCY) > RIGHT_THRESHOLD)
 		{
-			// Stick_2_X = 100 -> Stick_2 Right
-			set_val(STICK_2_X, 100.00);
-		}
-	if(get_val(ACCEL_2_Y) < -9.00)
-		{
-			// Stick_2_X = -100 -> Stick_2 Left
-			set_val(STICK_2_X, -100.00);
+			set_val(SWITCH_LX, 100.00); /* Stick right */
 		}
 
-	if((get_prev(ACCEL_2_Y) < 0.00) && (get_val(ACCEL_2_Y) >= 0.00))
+	if(get_val(SWITCH_JOYACCY) < LEFT_THRESHOLD)
+		{
+			// Stick_2_X = -100 -> Stick_2 Left
+			set_val(SWITCH_LX, -100.00); /* Stick left */
+		}
+
+	if(
+		(get_prev(SWITCH_JOYACCY) < LEFT_TO_RIGHT_THRESHOLD) && 
+		(get_val(SWITCH_JOYACCY) >= LEFT_TO_RIGHT_THRESHOLD)
+		)
 		{
 			combo_run(LeftToRight);
 		}
 
-	if((get_prev(ACCEL_2_Y) >= -0.00) && (get_val(ACCEL_2_Y) < -0.00))
+	if(
+		(get_prev(SWITCH_JOYACCY) >= RIGHT_TO_LEFT_THRESHOLD) && 
+		(get_val(SWITCH_JOYACCY) < RIGHT_TO_LEFT_THRESHOLD)
+		)
 		{
 			combo_run(RightToLeft);
 		}
 	
-	if(get_val(ACCEL_2_Z) >= 5.00) 
+	if(get_val(SWITCH_JOYACCZ) >= UP_THRESHOLD) 
 		{
-			// Stick_2 = -100 -> Up
-			set_val(STICK_2_Y, -100.00);
+			set_val(SWITCH_LY, -100.00); /* Stick Up */
 		}
-	if(get_val(ACCEL_2_Z) < -10.00)
+	if(get_val(SWITCH_JOYACCZ) < DOWN_THRESHOLD)
 		{
-			// Stick_2 = 100 -> Down
-			set_val(STICK_2_Y, 100.00);
+			set_val(SWITCH_LY, 100.00); /* Stick Down */
 		}
 	
-	// Disable
-	set_val(BUTTON_10, 0.00);
-	set_val(BUTTON_11, 0.00);
-	set_val(BUTTON_12, 0.00);
-	set_val(BUTTON_13, 0.00);
+	// Disable buttons covered by leg strap
+	set_val(SWITCH_UP, 0.00);
+	set_val(SWITCH_DOWN, 0.00);
+	set_val(SWITCH_LEFT, 0.00);
+	set_val(SWITCH_RIGHT, 0.00);
 
 	// Allow using the stick on Right Joy-Con by rotating 90 degrees
-	if((get_actual(STICK_1_X) < -50.00) || (get_actual(STICK_1_X) > 50.00)) 
+	if((get_actual(SWITCH_RX) < -50.00) || (get_actual(SWITCH_RX) > 50.00)) 
 		{
-			set_val(STICK_2_Y, get_actual(STICK_1_X));
+			set_val(SWITCH_LY, get_actual(SWITCH_RX));
 		}
-	if((get_actual(STICK_1_Y) < -50.00) || (get_actual(STICK_1_Y) > 50.00))
+	if((get_actual(SWITCH_RY) < -50.00) || (get_actual(SWITCH_RY) > 50.00))
 		{
-			set_val(STICK_2_X, -1.00 * get_actual(STICK_1_Y));
+			set_val(SWITCH_LX, -1.00 * get_actual(SWITCH_RY));
 		}
 	
 	// Allow using buttons on Right JoyCon by rotating 90 degrees
-	// BUTTON_14: X, BUTTON_15: A, BUTTON_16: B, BUTTON_17: Y
-	set_val(BUTTON_14, get_actual(BUTTON_17));
-	set_val(BUTTON_17, get_actual(BUTTON_16));
-	set_val(BUTTON_16, get_actual(BUTTON_15));
-	set_val(BUTTON_15, get_actual(BUTTON_14));
+	set_val(SWITCH_X, get_actual(SWITCH_Y));
+	set_val(SWITCH_Y, get_actual(SWITCH_B));
+	set_val(SWITCH_B, get_actual(SWITCH_A));
+	set_val(SWITCH_A, get_actual(SWITCH_X));
 
-	// ACCEL_1_Z < 2 -> Squat
-	if(get_val(ACCEL_1_Z) < 0.00)
+	// Squat
+	if(get_val(SWITCH_ACCZ) < SQUAT_THRESHOLD)
 		{
-			// BUTTON_17 (Y Button) -> Buster
-			set_val(BUTTON_17, 100.00);
+			set_val(SQUAT_TRIGGERING_BUTTON, 100.00);
 		}
 }
 
+// Switch direction to right
 combo LeftToRight
 {
-	set_val(STICK_2_X, 100.00);
+	set_val(SWITCH_LX, 100.00);
 	wait(1);
-	set_val(STICK_2_X, 0.00);
+	set_val(SWITCH_LX, 0.00);
 }
 
+// Switch direction to left
 combo RightToLeft
 {
-	set_val(STICK_2_X, -100.00);
+	set_val(SWITCH_LX, -100.00);
 	wait(1);
-	set_val(STICK_2_X, 0.00);
+	set_val(SWITCH_LX, 0.00);
 }
