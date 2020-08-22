@@ -52,7 +52,12 @@ The following steps worked for me (after struggling), but I can not guarantee in
     - Additional Micro-USB cable (A Micro-USB cable comes with Titan Two, but you will need one more to connect both PC and 
     Nintendo Switch Dock. I could use an old Micro-USB cable used to charge my old Android smart phone.)
 
-1. Purchase and download [Mega Man Legacy Collection](https://www.nintendo.com/games/detail/mega-man-legacy-collection-switch/) to your Nintendo Switch.
+1. Purchase and download Mega Man you like to your Nintendo Switch.
+- [Mega Man Legacy Collection (Mega Man 1-6)](https://www.nintendo.com/games/detail/mega-man-legacy-collection-switch/)
+- [Mega Man Legacy Collection 2 (Mega Man 7-10)](https://www.nintendo.com/games/detail/mega-man-legacy-collection-2-switch/)
+- [Mega Man 11](https://www.nintendo.com/games/detail/mega-man-11-switch/)
+- [Mega Man X Legacy Collection (Mega Man X1-4)](https://www.nintendo.com/games/detail/mega-man-x-legacy-collection-switch/)
+- [Mega Man X Legacy Collection 2 (Mega Man X5-8)](https://www.nintendo.com/games/detail/mega-man-x-legacy-collection-2-switch/)
 
 2. Turn on "Pro Controller Wired Communication" in Nintendo Switch following the [instruction](https://www.nintendo.co.uk/Support/Nintendo-Switch/How-to-Enable-Disable-Nintendo-Switch-Pro-Controller-Wired-Communication-1516284.html) to recognize Titan Two in the later step.
 
