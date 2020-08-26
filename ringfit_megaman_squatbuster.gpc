@@ -160,6 +160,8 @@ main {
 		{
 			set_val(SWITCH_LX, -1.00 * get_actual(SWITCH_RY));
 		}
+	set_val(SWITCH_RX, 0.00);
+	set_val(SWITCH_RY, 0.00);
 	
 	// Allow using buttons on Right JoyCon by rotating 90 degrees
 	set_val(SWITCH_X, get_actual(SWITCH_Y));
