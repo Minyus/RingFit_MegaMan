@@ -2,9 +2,16 @@
 
 ![RingFit_MegaMan](img/RingFit_MegaMan.jpg)
 
+Play Mega Man (known as Rockman in Japan) using Ring Fit Adventure controller for exercise
+
+## Demo video
+
+Available at: https://youtu.be/oEQCxjjR8Ys
+![Demo_Video](img/Demo_Video.png)
+
+## Hardware Architecture
 ![architecture](img/architecture.drawio.svg)
 
-Instruction to play Mega Man (known as Rockman in Japan) using Ring Fit Adventure controller for exercise
 
 ## How to play Mega Man in Ring Fit way
 
